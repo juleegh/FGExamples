@@ -3396,6 +3396,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1677328535}
   - component: {fileID: 1677328534}
+  - component: {fileID: 1677328537}
+  - component: {fileID: 1677328536}
   m_Layer: 0
   m_Name: Piggy Bank
   m_TagString: Untagged
@@ -3415,6 +3417,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da1ad730afbb59b41a8d036e3e2bb834, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tax: 0.3
+  cheque1: {fileID: 1677328537}
+  cheque2: {fileID: 1677328536}
 --- !u!4 &1677328535
 Transform:
   m_ObjectHideFlags: 0
@@ -3430,6 +3435,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1677328536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1677328533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20ae022fadf2e2a4ebbe87ef657054f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  issuedBy: Martin
+  issuedTo: Juliana
+  amount: 225
+--- !u!114 &1677328537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1677328533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20ae022fadf2e2a4ebbe87ef657054f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  issuedBy: Rob
+  issuedTo: Juliana
+  amount: 350
 --- !u!1 &1750021666
 GameObject:
   m_ObjectHideFlags: 0

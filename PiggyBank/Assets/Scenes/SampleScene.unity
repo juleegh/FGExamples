@@ -3420,6 +3420,9 @@ MonoBehaviour:
   tax: 0.3
   cheque1: {fileID: 1677328537}
   cheque2: {fileID: 1677328536}
+  bikePrice: 5
+  ps5Price: 10
+  pokemonPlushiePrice: 2
 --- !u!4 &1677328535
 Transform:
   m_ObjectHideFlags: 0

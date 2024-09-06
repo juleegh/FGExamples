@@ -9,38 +9,46 @@ public class PiggyBank : MonoBehaviour
     private int fiftyCentCoins;
     private int oneDollarBills;
     private int fiveDollarBills;
-    private float totalMoney;
 
     // --------- FUNCTIONS ----------
+
+    public float GetTotalMoney()
+    {
+        return tenCentCoins * 0.1f + twentyFiveCentCoins * 0.25f + fiftyCentCoins * 0.5f + oneDollarBills * 1f + fiveDollarBills * 5f;
+    }
+
+    public void ApplyGrandmasGift()
+    {
+        tenCentCoins = tenCentCoins * 2;
+        twentyFiveCentCoins = twentyFiveCentCoins * 2;
+        fiftyCentCoins = fiftyCentCoins * 2;
+        oneDollarBills = oneDollarBills * 2;
+        fiveDollarBills = fiveDollarBills * 2;
+    }
 
     public void Add10()
     {
         tenCentCoins = tenCentCoins + 1;
-        totalMoney = totalMoney + 0.1f;
     }
 
     public void Add25()
     {
         twentyFiveCentCoins = twentyFiveCentCoins + 1;
-        totalMoney = totalMoney + 0.25f;
     }
 
     public void Add50()
     {
         fiftyCentCoins = fiftyCentCoins + 1;
-        totalMoney = totalMoney + 0.5f;
     }
 
     public void DoAction1()
     {
         oneDollarBills = oneDollarBills + 1;
-        totalMoney = totalMoney + 1f;
     }
 
     public void DoAction2()
     {
         fiveDollarBills = fiveDollarBills + 1;
-        totalMoney = totalMoney + 5f;
     }
 
     public string GetText1()
@@ -60,6 +68,7 @@ public class PiggyBank : MonoBehaviour
 
     public string GetText4()
     {
-        return "The total amount of money in the pig is " + totalMoney;
+        ApplyGrandmasGift();
+        return "The total amount of money after grandmas gift is " + GetTotalMoney();
     }
 }
